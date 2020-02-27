@@ -69,9 +69,9 @@ if __name__ == "__main__":
     K, N = 0, 0
 
     while K < 4 or K > 9:
-        K = input("Enter the number of cities (4-9): ")
+        K = int(input("Enter the number of cities (4-9): "))
     
     while N < 10 or N > 30:
-        N = input("Enter the length of the sides of the grid (10-30): ")
+        N = int(input("Enter the length of the sides of the grid (10-30): "))
 
     TSP(K, N)
