@@ -163,7 +163,7 @@ def calc_shortest_route(d_mat, k, n):
     optimal_route = combos[counter]
     
     #print best path and distance to the user
-    print("OPTIMAL ROUTE")
+    print("\nOPTIMAL ROUTE")
     print("The shortest route is ") 
     print(optimal_route)
     print("with a distance of ")
