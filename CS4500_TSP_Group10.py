@@ -14,12 +14,13 @@ RESOURCES:
 https://stackoverflow.com/questions/240178/list-of-lists-changes-reflected-across-sublists-unexpectedly
 https://stackoverflow.com/questions/11858159/displaying-python-2d-list-without-commas-brackets-etc-and-newline-after-every
 """
-import collections#for ordered dictionary
-import math#for square root
+import collections #for ordered dictionary
+import math #for square root
 from random import seed
 from random import randint
-from itertools import permutations#creating city routes
+from itertools import permutations #creating city routes
 seed(4500)
+
 #method that takes an integer from a user that 
 #will be used as the number of cities the salesman
 #visits
@@ -30,6 +31,7 @@ def user_pick_num_cities():
         print("Only enter an integer value of 4, 5, 6, 7, 8, or 9:")
         k = int(input("Please re-enter a value for k: \n"))
     return k
+  
 #method that takes an integer from a user that
 #determines the length of one side of the "map"
 def user_pick_grid_len():
@@ -40,11 +42,12 @@ def user_pick_grid_len():
         print("Only enter an integer value between 10 and 30, including 10 and 30:")
         n = int(input("Please re-enter a value for n: \n"))
     return n
+  
 #method that creates semi-randomly generated
 #pairs of numbers/coordinates to be used as 
 #city locations
 def get_coordinates(k, n):
-    city_coords = []#list to hold coordinates
+    city_coords = [] #list to hold coordinates
     
     for cities in range(k):          
         x, y = randint(0, n), randint(0, n)
@@ -53,6 +56,7 @@ def get_coordinates(k, n):
     print("\nCOORDINATES")
     print(*city_coords)
     return city_coords
+  
 #method that creates and prints a grid of size nxn
 #and fills it with periods until the nested loop
 #uses the coordinates created above to map 
@@ -72,6 +76,7 @@ def create_grid(city, k, n):
     print("\nGRID")
     for row in grid:
         print (" ".join(map(str,row)))
+        
 #method that uses the coordinates to make and print 
 #two matrices full of the distances to and from each
 #of the cities. the x's and y's of each of the 
@@ -109,11 +114,9 @@ def find_distances(coords, k):
         print("\t\t")          
         
     return dist_matrix
-"""
+
 #method that calculates the shortest route
-#given the distance matrix and permutations
-#of the 
-"""
+#given the distance matrix and route permutations
 def calc_shortest_route(d_mat, k, n):
     #numbers to make the route permutations 
     numbers = []    
@@ -152,6 +155,10 @@ def calc_shortest_route(d_mat, k, n):
         if temp_dist < shortest:
             shortest = temp_dist
             counter = temp
+            print("The shortest route so far, ")
+            print(combos[counter])
+            print("has a distance of ")
+            print(shortest)     
     
     optimal_route = combos[counter]
     
