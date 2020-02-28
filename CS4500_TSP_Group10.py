@@ -2,7 +2,7 @@
 CONTRIBUTORS: James Brown (jtb9d2@mail.umsl.edu)
               Safiullah Khan ()
               Eva Roeder (emrf2b@mail.umsl.edu)
-              Adam Wilson ()
+              Adam Wilson (adwzq4@gmail.com)
 PROJECT NAME: "Implementation of an Exhaustive Traveling Salesman Problem"
 CLASS: Cmp Sci 4500-02
 FILENAME: CS4500_TSP_Group10.py
