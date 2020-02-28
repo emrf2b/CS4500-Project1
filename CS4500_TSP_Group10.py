@@ -1,4 +1,9 @@
 """
+DESCRIPTION:
+This is a group project for Introduction to the Software Profession
+course at UMSL under Dr. Keith Miller.
+This program implements an exhaustive or a "brute force" version
+of the famous algorithm, the Traveling Salesman Problem (TSP). 
 CONTRIBUTORS: James Brown (jtb9d2@mail.umsl.edu)
               Safiullah Khan ()
               Eva Roeder (emrf2b@mail.umsl.edu)
